@@ -12,14 +12,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //var array = SortHelper.getNearSortArray(number: 3000, swapNumber: 10)
-        var array = SortHelper.getArray(number: 100000, left: -500000, right: 250000)
+        //var array = SortHelper.getNearSortArray(number: 500000, swapNumber: 100)
+        var array = SortHelper.getArray(number: 300000, left: 0, right: 10)
         var array2 = array
+        var array3 = array
         
         SortHelper.testTime(name: "MergeSort", array: &array, closure: mergeSort)
         SortHelper.testTime(name: "QuickSort", array: &array2, closure: quickSort)
+        SortHelper.testTime(name: "QuickSort3", array: &array3, closure: quickSort3)
         SortHelper.testSort(array: array)
         SortHelper.testSort(array: array2)
+        SortHelper.testSort(array: array3)
     }
 
     
@@ -101,18 +104,62 @@ class ViewController: UIViewController {
         quickSort(array: &array, left: 0, right: array.count - 1)
     }
     
+    func quickSort3<T: Comparable>(array: inout Array<T>) {
+        quickSort3(array: &array, left: 0, right: array.count - 1)
+    }
+    
     private func quickSort<T: Comparable>(array: inout Array<T>, left: Int, right: Int) {
+        if right - left <= 15 {
+            inserSort(array: &array, left: left, right: right)
+            return
+        }
         if left >= right {
             return
         }
-        let p = partition(array: &array, left: left, right: right)
+        let p = partition2(array: &array, left: left, right: right)
         quickSort(array: &array, left: left, right: p)
         quickSort(array: &array, left: p + 1, right: right)
+    }
+    
+    private func quickSort3<T: Comparable>(array: inout Array<T>, left: Int, right: Int) {
+        if right - left <= 15 {
+            inserSort(array: &array, left: left, right: right)
+            return
+        }
+        if left >= right {
+            return
+        }
+        var lt = left //array[left+1...lt] < t
+        var gt = right + 1 //array[gt...right] > t
+        var i = left + 1 //array[lt...i - 1] == t
+        
+        let v = Int.random(in: left...right)
+        array.swapAt(left, v)
+        let t = array[left]
+        
+        while i < gt {
+            if array[i] < t {
+                array.swapAt(i, lt + 1)
+                i += 1
+                lt += 1
+            } else if array[i] > t {
+                array.swapAt(i, gt - 1)
+                gt -= 1
+            } else {
+                i += 1
+            }
+        }
+        
+        quickSort3(array: &array, left: left, right: lt)
+        quickSort3(array: &array, left: gt, right: right)
+        
     }
     
     private func partition<T: Comparable>(array: inout Array<T>, left: Int, right: Int) -> Int {
         var i = left + 1
         var j = left
+        let v = Int.random(in: left...right)
+        array.swapAt(left, v)
         while i <= right {
             if array[i] < array[left] {
                 array.swapAt(i, j + 1)
@@ -123,5 +170,29 @@ class ViewController: UIViewController {
         array.swapAt(left, j)
         return j
     }
+    
+    private func partition2<T: Comparable>(array: inout Array<T>, left: Int, right: Int) -> Int {
+        let v = Int.random(in: left...right)
+        array.swapAt(left, v)
+        let t = array[left]
+        var i = left + 1
+        var j = right
+        while i <= j {
+            while i <= right && array[i] < t {
+                i += 1
+            }
+            while j >= left + 1 && array[j] > t {
+                j -= 1
+            }
+            if i <= j {
+                array.swapAt(i, j)
+                i += 1
+                j -= 1
+            }
+        }
+        array.swapAt(left, j)
+        return j
+    }
+    
 }
 
