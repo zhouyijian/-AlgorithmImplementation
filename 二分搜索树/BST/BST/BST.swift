@@ -143,5 +143,102 @@ struct BST<K: Comparable, V> {
             }
         }
     }
+    
+    func findMin() -> K? {
+        return findMin(node: root)?.key
+    }
+    
+    private func findMin(node: Node?) -> Node? {
+        if node == nil {
+            return nil
+        }
+        if node?.left == nil {
+            return node
+        } else {
+            return findMin(node: node?.left)
+        }
+    }
+    
+    func findMax() -> K? {
+        return findMin(node: root)?.key
+    }
+    
+    private func findMax(node: Node?) -> Node? {
+        if node == nil {
+            return nil
+        }
+        if node?.right == nil {
+            return node
+        } else {
+            return findMax(node: node?.right)
+        }
+    }
+    
+    mutating func removeMin() {
+        root = removeMin(node: root)
+    }
+    
+    private mutating func removeMin(node: Node?) -> Node? {
+        if node == nil {
+            return nil
+        }
+        if node?.left == nil {
+            count -= 1
+            return node?.right
+        } else {
+            node?.left = removeMin(node: node?.left)
+            return node
+        }
+    }
+    
+    mutating func removeMax() {
+        root = removeMax(node: root)
+    }
+    
+    private mutating func removeMax(node: Node?) -> Node? {
+        if node == nil {
+            return nil
+        }
+        if node?.right == nil {
+            count -= 1
+            return node?.left
+        } else {
+            node?.left = removeMax(node: node?.right)
+            return node
+        }
+    }
+    
+    mutating func remvoe(key: K) -> V? {
+        return remove(node: root, key: key)?.value
+    }
+    
+    private mutating func remove(node: Node?, key: K) -> Node? {
+        if node == nil {
+            return nil
+        }
+        if key < node!.key {
+            node?.left = remove(node: node!.left, key: key)
+            return node
+        } else if key > node!.key {
+            node?.right = remove(node: node!.right, key: key)
+            return node
+        }
+        
+        if node?.left == nil {
+            count -= 1
+            return node?.right
+        }
+        if node?.right == nil {
+            count -= 1
+            return node?.left
+        }
+        
+        let sussor = findMin(node: node?.right)
+        sussor?.left = node?.left
+        sussor?.right = removeMin(node: node?.right)//此处执行了 count -= 1
+        return sussor
+    }
+    
+    
 }
 
