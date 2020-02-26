@@ -12,8 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let d = DenseGraph.init(n: 10, driected: false)
-        print(d)
+        var sg = SpreseGraph.init(n: 10, driected: false)
+        for _ in 0...5 {
+            sg.addEdge(v: Int.random(in: 0..<10), w: Int.random(in: 3..<7))
+        }
+        
     }
 
 
