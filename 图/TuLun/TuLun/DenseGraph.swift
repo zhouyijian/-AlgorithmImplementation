@@ -63,6 +63,38 @@ class DenseGraph: Graph {
     private func isEdge(v: Int, w: Int) -> Bool {
         return g[v][w]
     }
+    
+    class adjTerrator {
+        private var g: DenseGraph
+        private var v: Int
+        private var index: Int
+        
+        init(g: DenseGraph, v: Int) {
+            self.g = g
+            self.v = v
+            self.index = -1
+        }
+        
+        func begin() -> Int? {
+            self.index = -1
+            return next()
+        }
+        
+        func next() -> Int? {
+            self.index += 1
+            while self.index < self.g.g[v].count {
+                if self.g.g[v][self.index] {
+                    return self.index
+                }
+                self.index += 1
+            }
+            return nil
+        }
+        
+        func end() -> Bool {
+            return index >= g.g[v].count
+        }
+    }
 }
 
 

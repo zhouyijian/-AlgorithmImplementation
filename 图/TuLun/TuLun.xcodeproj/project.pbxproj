@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F902A7CF2402CCE900A152D2 /* SpreseGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F902A7CE2402CCE900A152D2 /* SpreseGraph.swift */; };
+		F963AC72240EAC2900DBC594 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963AC71240EAC2900DBC594 /* Component.swift */; };
 		F9D0A15E23CE105F007B7EC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D0A15D23CE105F007B7EC9 /* AppDelegate.swift */; };
 		F9D0A16023CE105F007B7EC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D0A15F23CE105F007B7EC9 /* SceneDelegate.swift */; };
 		F9D0A16223CE105F007B7EC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D0A16123CE105F007B7EC9 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		F902A7CE2402CCE900A152D2 /* SpreseGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreseGraph.swift; sourceTree = "<group>"; };
+		F963AC71240EAC2900DBC594 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		F9D0A15A23CE105F007B7EC9 /* TuLun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuLun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D0A15D23CE105F007B7EC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9D0A15F23CE105F007B7EC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				F9D0A16B23CE1061007B7EC9 /* Info.plist */,
 				F9D0A17123CE106B007B7EC9 /* DenseGraph.swift */,
 				F902A7CE2402CCE900A152D2 /* SpreseGraph.swift */,
+				F963AC71240EAC2900DBC594 /* Component.swift */,
 			);
 			path = TuLun;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9D0A16223CE105F007B7EC9 /* ViewController.swift in Sources */,
+				F963AC72240EAC2900DBC594 /* Component.swift in Sources */,
 				F9D0A15E23CE105F007B7EC9 /* AppDelegate.swift in Sources */,
 				F9D0A17223CE106B007B7EC9 /* DenseGraph.swift in Sources */,
 				F9D0A16023CE105F007B7EC9 /* SceneDelegate.swift in Sources */,
