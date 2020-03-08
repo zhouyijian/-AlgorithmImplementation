@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var sg = SpreseGraph.init(n: 10, driected: false)
-        var dg = DenseGraph.init(n: 10, driected: false)
+        let sg = SpreseGraph.init(n: 10, driected: false)
+        let dg = DenseGraph.init(n: 10, driected: false)
         for _ in 0...5 {
             sg.addEdge(v: Int.random(in: 0..<10), w: Int.random(in: 3..<7))
             dg.addEdge(v: Int.random(in: 0..<10), w: Int.random(in: 3..<7))
@@ -28,23 +28,18 @@ class ViewController: UIViewController {
                 w = adj.next()
             }
         }
-        
+        print("----")
         let c = Component.init(sp: sg)
         print("ccount\(c.ccountNumber())")
         print(c.isConnected(i: 0, j: 3))
         
+        let d = Path.init(sp: sg, s: 5)
+        d.showPath(w: 3)
         
-        print("-----")
+        print("----")
         
-        for i in 0..<10 {
-            print("\(i): ")
-            let adj = DenseGraph.adjTerrator.init(g: dg, v: i)
-            var w = adj.begin()
-            while !adj.end() {
-                print(w!)
-                w = adj.next()
-            }
-        }
+        let s = ShortPath.init(sp: sg, s: 0)
+        s.showPath(w: 6)
     }
 
 
