@@ -12,22 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var array = Array<Int>()
+        var minHeap = MinHeap<Int>.init(capacity: 100)
         let count = 30
         for _ in 0..<count {
-            array.append(Int.random(in: 0..<count))
+            minHeap.insert(value: Int.random(in: 0..<100))
         }
-        var maxHeap = MaxHeap<Int>.init(array: array)
-        
-        print(maxHeap)
-        for i in 0..<count/2 {
-            maxHeap.change(index: i, item: Int.random(in: 0..<count*2))
-        }
-        print(maxHeap)
         for _ in 0..<count {
-            print(maxHeap.removeTop())
+            print(minHeap.extractMin())
         }
-        print(maxHeap.isEmpty())
+        print(minHeap.isEmpty())
+    
         
     }
 

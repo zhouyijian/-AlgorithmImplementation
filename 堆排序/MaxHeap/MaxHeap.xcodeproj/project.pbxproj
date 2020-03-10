@@ -13,7 +13,9 @@
 		F93F374A23B108BD00DDB26C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93F374823B108BD00DDB26C /* Main.storyboard */; };
 		F93F374C23B108BE00DDB26C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F93F374B23B108BE00DDB26C /* Assets.xcassets */; };
 		F93F374F23B108BE00DDB26C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93F374D23B108BE00DDB26C /* LaunchScreen.storyboard */; };
-		F93F375723B108D200DDB26C /* MaxHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93F375623B108D200DDB26C /* MaxHeap.swift */; };
+		F93F375723B108D200DDB26C /* MaxIndexHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93F375623B108D200DDB26C /* MaxIndexHeap.swift */; };
+		F9B8C8CE2417C17F00BFA268 /* MinHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B8C8CD2417C17E00BFA268 /* MinHeap.swift */; };
+		F9B8C8D02417EA4F00BFA268 /* MinIndexHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B8C8CF2417EA4F00BFA268 /* MinIndexHeap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,9 @@
 		F93F374B23B108BE00DDB26C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F93F374E23B108BE00DDB26C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F93F375023B108BE00DDB26C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F93F375623B108D200DDB26C /* MaxHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxHeap.swift; sourceTree = "<group>"; };
+		F93F375623B108D200DDB26C /* MaxIndexHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxIndexHeap.swift; sourceTree = "<group>"; };
+		F9B8C8CD2417C17E00BFA268 /* MinHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinHeap.swift; sourceTree = "<group>"; };
+		F9B8C8CF2417EA4F00BFA268 /* MinIndexHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinIndexHeap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +69,9 @@
 				F93F374B23B108BE00DDB26C /* Assets.xcassets */,
 				F93F374D23B108BE00DDB26C /* LaunchScreen.storyboard */,
 				F93F375023B108BE00DDB26C /* Info.plist */,
-				F93F375623B108D200DDB26C /* MaxHeap.swift */,
+				F93F375623B108D200DDB26C /* MaxIndexHeap.swift */,
+				F9B8C8CD2417C17E00BFA268 /* MinHeap.swift */,
+				F9B8C8CF2417EA4F00BFA268 /* MinIndexHeap.swift */,
 			);
 			path = MaxHeap;
 			sourceTree = "<group>";
@@ -141,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F93F375723B108D200DDB26C /* MaxHeap.swift in Sources */,
+				F93F375723B108D200DDB26C /* MaxIndexHeap.swift in Sources */,
+				F9B8C8D02417EA4F00BFA268 /* MinIndexHeap.swift in Sources */,
 				F93F374723B108BD00DDB26C /* ViewController.swift in Sources */,
 				F93F374323B108BD00DDB26C /* AppDelegate.swift in Sources */,
+				F9B8C8CE2417C17F00BFA268 /* MinHeap.swift in Sources */,
 				F93F374523B108BD00DDB26C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

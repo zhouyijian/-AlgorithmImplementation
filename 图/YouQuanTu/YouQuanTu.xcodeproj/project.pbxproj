@@ -16,6 +16,7 @@
 		F98AF7DF2414ABA500D2E989 /* SpreseGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AF7DD2414ABA500D2E989 /* SpreseGraph.swift */; };
 		F98AF7E02414ABA500D2E989 /* DenseGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AF7DE2414ABA500D2E989 /* DenseGraph.swift */; };
 		F98AF7E22414ABDB00D2E989 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AF7E12414ABDB00D2E989 /* Edge.swift */; };
+		F98AF7E42414CBEC00D2E989 /* LazyPrimMST.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AF7E32414CBEC00D2E989 /* LazyPrimMST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F98AF7DD2414ABA500D2E989 /* SpreseGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpreseGraph.swift; sourceTree = "<group>"; };
 		F98AF7DE2414ABA500D2E989 /* DenseGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DenseGraph.swift; sourceTree = "<group>"; };
 		F98AF7E12414ABDB00D2E989 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		F98AF7E32414CBEC00D2E989 /* LazyPrimMST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPrimMST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				F98AF7E12414ABDB00D2E989 /* Edge.swift */,
+				F98AF7E32414CBEC00D2E989 /* LazyPrimMST.swift */,
 				F98AF7DE2414ABA500D2E989 /* DenseGraph.swift */,
 				F98AF7DD2414ABA500D2E989 /* SpreseGraph.swift */,
 				F98AF7C92414AA4E00D2E989 /* AppDelegate.swift */,
@@ -152,6 +155,7 @@
 				F98AF7CE2414AA4E00D2E989 /* ViewController.swift in Sources */,
 				F98AF7E22414ABDB00D2E989 /* Edge.swift in Sources */,
 				F98AF7CA2414AA4E00D2E989 /* AppDelegate.swift in Sources */,
+				F98AF7E42414CBEC00D2E989 /* LazyPrimMST.swift in Sources */,
 				F98AF7CC2414AA4E00D2E989 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MaxHeap<T: Comparable> {
+struct MaxIndexHeap<T: Comparable> {
     private var data: [T] = [] //数据真正存放的数组 从 0 开始
     private var count = 0 //数据的数量
     private var indexs: [Int] = [] //indexs 的索引，代表数据在二叉堆中的位置，indexs 的值代表数据在 data 中的索引
