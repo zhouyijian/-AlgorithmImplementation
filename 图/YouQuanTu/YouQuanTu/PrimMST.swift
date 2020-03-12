@@ -1,17 +1,17 @@
 //
-//  LazyPrimMST.swift
+//  PrimMST.swift
 //  YouQuanTu
 //
-//  Created by 周一见 on 2020/3/8.
+//  Created by 周一见 on 2020/3/12.
 //  Copyright © 2020 周一见. All rights reserved.
 //
 
 import Foundation
 
-class LazyPrimMST<Weight: Comparable> {
+class PrimMST<Weight: Comparable> {
     private var dg: DenseGraph<Weight>
-    ///横切边最小堆
-    private var pq: MinHeap<Edge<Weight>>
+    ///横切边最小索引堆
+    private var pq: MinIndexHeap<Edge<Weight>>
     ///是否被遍历过
     private var marked: [Bool]
     ///最小生成树边的数组
@@ -20,8 +20,7 @@ class LazyPrimMST<Weight: Comparable> {
     init(g: DenseGraph<Weight>) {
         self.dg = g
         self.marked = Array.init(repeating: false, count: g.getNumber())
-        self.pq = MinHeap<Edge<Weight>>.init(capacity: g.getNumber())
-        
+        self.pq = MinIndexHeap<Edge<Weight>>.init(capacity: g.getNumber())
         visited(v: 0)
         while !pq.isEmpty() {
             let min = pq.extractMin()
@@ -39,7 +38,13 @@ class LazyPrimMST<Weight: Comparable> {
         var m = adj.begin()
         while !adj.end() {
             if let m0 = m, !marked[m0.other(x: v)] {
-                pq.insert(value: m0)
+                if pq.contains(index: v) {
+                    if pq.getItem(index: v) > m0 {
+                        pq.changeIndex(index: v, value: m0)
+                    }
+                } else {
+                    pq.insert(index: v, value: m0)
+                }
             }
             m = adj.next()
         }
