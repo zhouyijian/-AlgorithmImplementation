@@ -23,11 +23,13 @@ class PrimMST<Weight: Comparable> {
         self.pq = MinIndexHeap<Edge<Weight>>.init(capacity: g.getNumber())
         visited(v: 0)
         while !pq.isEmpty() {
+            let v = pq.getMixIndex()
             let min = pq.extractMin()
             if marked[min.v()] == marked[min.w()] {
                 continue
             }
             mst.append(min)
+            visited(v: v)
         }
     }
     
