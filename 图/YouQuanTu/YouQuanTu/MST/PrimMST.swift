@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PrimMST<Weight: Comparable> {
+class PrimMST<Weight: Comparable & Numeric> {
     private var dg: DenseGraph<Weight>
     ///横切边最小索引堆
     private var pq: MinIndexHeap<Edge<Weight>>

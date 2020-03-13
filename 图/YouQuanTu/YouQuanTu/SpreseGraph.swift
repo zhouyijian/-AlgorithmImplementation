@@ -9,7 +9,7 @@
 import Foundation
 
 ///邻接表，用于稀疏图
-class SpreseGraph<Weight: Comparable> {
+class SpreseGraph<Weight: Comparable & Numeric> {
     ///顶点数目
     private var n: Int
     ///边数目

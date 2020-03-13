@@ -11,7 +11,7 @@ import Foundation
 typealias Matrix<T: Equatable> = Array<[T]>
 
 ///邻接矩阵，用于稠密图或完全图
-class DenseGraph<Weight: Comparable> {
+class DenseGraph<Weight: Comparable & Numeric> {
     
     ///顶点数目
     private var n: Int

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LazyPrimMST<Weight: Comparable> {
+class LazyPrimMST<Weight: Comparable & Numeric> {
     private var dg: DenseGraph<Weight>
     ///横切边最小堆
     private var pq: MinHeap<Edge<Weight>>

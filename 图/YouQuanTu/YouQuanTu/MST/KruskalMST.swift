@@ -8,7 +8,7 @@
 
 import Foundation
 
-class KruskalMST<Weight: Comparable> {
+class KruskalMST<Weight: Comparable & Numeric> {
     private var dg: DenseGraph<Weight>
     ///最小生成树边的数组
     private var mst:[Edge<Weight>] = []

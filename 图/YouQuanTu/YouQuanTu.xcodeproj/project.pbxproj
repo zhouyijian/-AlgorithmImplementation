@@ -12,6 +12,7 @@
 		F90FFED0241A796E00328C1C /* UnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90FFECD241A796E00328C1C /* UnionFind.swift */; };
 		F90FFED2241A8F2600328C1C /* PrimMST.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90FFED1241A8F2600328C1C /* PrimMST.swift */; };
 		F930F457241BB273002714D7 /* KruskalMST.swift in Sources */ = {isa = PBXBuildFile; fileRef = F930F456241BB273002714D7 /* KruskalMST.swift */; };
+		F930F45B241BCE00002714D7 /* Drjkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = F930F45A241BCE00002714D7 /* Drjkstra.swift */; };
 		F98AF7CA2414AA4E00D2E989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AF7C92414AA4E00D2E989 /* AppDelegate.swift */; };
 		F98AF7CC2414AA4E00D2E989 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AF7CB2414AA4E00D2E989 /* SceneDelegate.swift */; };
 		F98AF7CE2414AA4E00D2E989 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AF7CD2414AA4E00D2E989 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		F90FFECD241A796E00328C1C /* UnionFind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnionFind.swift; sourceTree = "<group>"; };
 		F90FFED1241A8F2600328C1C /* PrimMST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimMST.swift; sourceTree = "<group>"; };
 		F930F456241BB273002714D7 /* KruskalMST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KruskalMST.swift; sourceTree = "<group>"; };
+		F930F45A241BCE00002714D7 /* Drjkstra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drjkstra.swift; sourceTree = "<group>"; };
 		F98AF7C62414AA4E00D2E989 /* YouQuanTu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouQuanTu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F98AF7C92414AA4E00D2E989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F98AF7CB2414AA4E00D2E989 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,24 @@
 			path = "Heap&UnionFind";
 			sourceTree = "<group>";
 		};
+		F930F458241BCDC8002714D7 /* MST */ = {
+			isa = PBXGroup;
+			children = (
+				F98AF7E32414CBEC00D2E989 /* LazyPrimMST.swift */,
+				F90FFED1241A8F2600328C1C /* PrimMST.swift */,
+				F930F456241BB273002714D7 /* KruskalMST.swift */,
+			);
+			path = MST;
+			sourceTree = "<group>";
+		};
+		F930F459241BCDD4002714D7 /* ShortPath */ = {
+			isa = PBXGroup;
+			children = (
+				F930F45A241BCE00002714D7 /* Drjkstra.swift */,
+			);
+			path = ShortPath;
+			sourceTree = "<group>";
+		};
 		F98AF7BD2414AA4E00D2E989 = {
 			isa = PBXGroup;
 			children = (
@@ -84,11 +104,10 @@
 		F98AF7C82414AA4E00D2E989 /* YouQuanTu */ = {
 			isa = PBXGroup;
 			children = (
+				F930F459241BCDD4002714D7 /* ShortPath */,
+				F930F458241BCDC8002714D7 /* MST */,
 				F90FFECA241A792900328C1C /* Heap&UnionFind */,
 				F98AF7E12414ABDB00D2E989 /* Edge.swift */,
-				F98AF7E32414CBEC00D2E989 /* LazyPrimMST.swift */,
-				F90FFED1241A8F2600328C1C /* PrimMST.swift */,
-				F930F456241BB273002714D7 /* KruskalMST.swift */,
 				F98AF7DE2414ABA500D2E989 /* DenseGraph.swift */,
 				F98AF7DD2414ABA500D2E989 /* SpreseGraph.swift */,
 				F98AF7C92414AA4E00D2E989 /* AppDelegate.swift */,
@@ -176,6 +195,7 @@
 				F98AF7DF2414ABA500D2E989 /* SpreseGraph.swift in Sources */,
 				F98AF7E02414ABA500D2E989 /* DenseGraph.swift in Sources */,
 				F90FFED2241A8F2600328C1C /* PrimMST.swift in Sources */,
+				F930F45B241BCE00002714D7 /* Drjkstra.swift in Sources */,
 				F90FFED0241A796E00328C1C /* UnionFind.swift in Sources */,
 				F930F457241BB273002714D7 /* KruskalMST.swift in Sources */,
 				F90FFECE241A796E00328C1C /* MinHeap.swift in Sources */,

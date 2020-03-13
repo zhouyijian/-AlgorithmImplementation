@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Edge<Weight: Comparable>: Comparable {
+struct Edge<Weight: Comparable & Numeric>: Comparable {
     static func < (lhs: Edge<Weight>, rhs: Edge<Weight>) -> Bool {
         return lhs.weight < rhs.weight
     }
