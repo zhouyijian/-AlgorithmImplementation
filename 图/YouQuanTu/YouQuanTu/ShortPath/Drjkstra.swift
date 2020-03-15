@@ -11,21 +11,22 @@ import Foundation
 class Drjkstra<Weight: Comparable & Numeric> {
     var g: SpreseGraph<Weight>
     var s: Int
-    var weight: Array<Weight>
+    ///每个点距离指定点路径大小
+    var distTo: Array<Weight>
     var marked: Array<Bool>
     var from: Array<Edge<Weight>?>
     
     init(g: SpreseGraph<Weight>, s: Int) {
         self.g = g
         self.s = s
-        self.weight = Array.init(repeating: Weight.init(exactly: 0)!, count: g.getNumber())
+        self.distTo = Array.init(repeating: Weight.init(exactly: 0)!, count: g.getNumber())
         self.marked = Array.init(repeating: false, count: g.getNumber())
         self.from = Array.init(repeating: nil, count: g.getNumber())
         
         var ipq = MinIndexHeap<Weight>.init(capacity: g.getNumber())
-        self.weight[s] = Weight.init(exactly: 0)!
+        self.distTo[s] = Weight.init(exactly: 0)!
         self.marked[s] = true
-        ipq.insert(index: s, value: weight[s])
+        ipq.insert(index: s, value: distTo[s])
         while !ipq.isEmpty() {
             let minIndex = ipq.getMixIndex()
             let _ = ipq.extractMin()
@@ -36,8 +37,8 @@ class Drjkstra<Weight: Comparable & Numeric> {
             while !adj.end() {
                 let w = m!.other(x: minIndex)
                 if !marked[w] {
-                    if from[w] == nil || (weight[minIndex] + m!.wt()) < weight[w] {
-                        weight[w] = weight[minIndex] + m!.wt()
+                    if from[w] == nil || (distTo[minIndex] + m!.wt()) < distTo[w] {
+                        distTo[w] = distTo[minIndex] + m!.wt()
                         from[w] = m
                         if ipq.contains(index: w) {
                             ipq.changeIndex(index: w, value: m!.wt())
@@ -56,7 +57,7 @@ class Drjkstra<Weight: Comparable & Numeric> {
     
     func shortPathTo(w: Int) -> Weight {
         assert(w >= g.getNumber())
-        return weight[w]
+        return distTo[w]
     }
         
     func hasPathTo(w: Int) -> Bool {

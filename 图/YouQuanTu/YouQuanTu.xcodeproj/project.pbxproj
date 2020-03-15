@@ -23,6 +23,7 @@
 		F98AF7E02414ABA500D2E989 /* DenseGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AF7DE2414ABA500D2E989 /* DenseGraph.swift */; };
 		F98AF7E22414ABDB00D2E989 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AF7E12414ABDB00D2E989 /* Edge.swift */; };
 		F98AF7E42414CBEC00D2E989 /* LazyPrimMST.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AF7E32414CBEC00D2E989 /* LazyPrimMST.swift */; };
+		F9936796241E351D00F6AB13 /* BellmanFord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9936795241E351D00F6AB13 /* BellmanFord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F98AF7DE2414ABA500D2E989 /* DenseGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DenseGraph.swift; sourceTree = "<group>"; };
 		F98AF7E12414ABDB00D2E989 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 		F98AF7E32414CBEC00D2E989 /* LazyPrimMST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyPrimMST.swift; sourceTree = "<group>"; };
+		F9936795241E351D00F6AB13 /* BellmanFord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellmanFord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				F930F45A241BCE00002714D7 /* Drjkstra.swift */,
+				F9936795241E351D00F6AB13 /* BellmanFord.swift */,
 			);
 			path = ShortPath;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9936796241E351D00F6AB13 /* BellmanFord.swift in Sources */,
 				F98AF7DF2414ABA500D2E989 /* SpreseGraph.swift in Sources */,
 				F98AF7E02414ABA500D2E989 /* DenseGraph.swift in Sources */,
 				F90FFED2241A8F2600328C1C /* PrimMST.swift in Sources */,
